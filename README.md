@@ -1,7 +1,3 @@
-My apologies for the oversight. Here's the corrected README with the live website link included:
-
----
-
 # Dribbble Clone
 
 ## Description
@@ -40,18 +36,27 @@ To run this project locally, follow these steps:
 1. **Sign Up:**
    - Visit the [Sign Up](https://kp4103.github.io/signup.html) page to create your account.
    - Follow the prompts to set up your profile, select your purpose, and verify your account.
+   
+   ![Dribbble Sign Up Page](https://github.com/Kp4103/kp4103.github.io/blob/main/assets/signup.png)
+
 
 2. **Profile Setup:**
    - After signing up, you will be redirected to the profile setup page.
    - Follow the instructions to create your profile by adding an avatar and location.
+      
+   ![Dribbble Sign Up Page](https://github.com/Kp4103/kp4103.github.io/blob/main/assets/signup.png)
 
 3. **Purpose Selection:**
    - Once your profile is set up, you will proceed to the purpose selection page.
    - Choose the option that best describes your reason for using Dribbble.
+        
+   ![Dribbble Sign Up Page](https://github.com/Kp4103/kp4103.github.io/blob/main/assets/profile.png)
 
 4. **Verification:**
    - After selecting your purpose, you will be redirected to the verification page.
    - Follow the verification instructions to complete the setup process.
+        
+   ![Dribbble Sign Up Page](https://github.com/Kp4103/kp4103.github.io/blob/main/assets/verification.png)
 
 ## Live Website
 

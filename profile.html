@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Setup</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <div class="profile-setup">
+    <div class="logo"><img src="assets\dribbble white logo.png" id="logo" alt="Illustration"></div>
+    <form action="purpose.html">
+    <h1>Welcome! Let's create your profile</h1>
+    <p>Let others get to know you better! You can do these later</p>
+    <h3>Add an Avatar</h3>
+    <div class="avatar">
+      <div class="avatar-frame">
+        <img src="assets\default male avatar.jpg" alt="Default Avatar">
+      </div>
+      <div class="avatar-upload"><label for="avatar-upload">Choose your Avatar</label></div>
+      <input type="file" id="avatar-upload" accept="image/*">
+      <p class="default-text" id="default-text">> Or choose from one of our defaults</p>
+
+      <div id="default-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="default-images">
+            <!-- Default images go here -->
+            <img src="assets\default male 1.jpg" alt="Default 1" class="default-image">
+            <img src="assets\default male 2.jpg" alt="Default 2" class="default-image">
+            <img src="assets\default male 3.jpg" alt="Default 3" class="default-image">
+            <img src="assets\default male avatar.jpg" alt="Default 4" class="default-image">
+            <img src="assets\default female 1.jpg" alt="Default 5" class="default-image">
+            <img src="assets\default female 2.jpg" alt="Default 6" class="default-image">
+            <img src="assets\default female 3.jpg" alt="Default 7" class="default-image">
+            <img src="assets\default female avatar.jpg" alt="Default 8" class="default-image">
+            <!-- Add more default images as needed -->
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="location">
+      <h3>Add your location</h3>
+      <input type="text" placeholder="Add your location" required>
+    </div>
+    <button class="next" type="submit">Next</button>
+  </form>
+  </div>
+
+    <script src="profile.js" type="module"></script>
+
+</body>
+</html>

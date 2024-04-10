@@ -1,0 +1,197 @@
+/* Reset and basic styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Helvetica, sans-serif;
+    background-color: #fff;
+  }
+
+  .logo{
+    margin-top: 0%;
+    margin-left: 0%;
+    display: block;
+  }
+  /* Profile setup styles */
+  .profile-setup {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    text-align: left;
+    max-width: 1220px;
+  }
+
+  .profile-setup h1 {
+    margin-top: 4rem;
+    color: #333;
+    display: block;
+    width: 100%;
+    margin-left: 30%;
+    font-weight: bolder;
+  }
+  
+  .profile-setup p {
+    margin-top: 1rem;
+    color: #6a6a6a;
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    margin-left: 30%;
+  }
+
+  .profile-setup h3 {
+    margin-top: 2rem;
+    color: #333;
+    display: block;
+    width: 100%;
+    margin-left: 30%;
+    font-weight: bold;
+  }
+  
+  .avatar {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    margin-left: 30%;
+    margin-top: 2rem;
+  }
+
+  .avatar p{
+    display: flex;
+    white-space: nowrap;
+    margin-top: 90%;
+    margin-left: -160%;
+    color: #8e8d8d;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .avatar-frame {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .avatar-frame img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-left: -0.8rem;
+  }
+
+  
+  #avatar-upload {
+    display: none;
+  }
+  
+  .avatar-upload {
+    display: flex;
+    margin-top: 20%;
+    margin-left: 120%;
+    background-color: #fff;
+    color: #0d0a1d;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 30px;
+    padding: 5px 10px;
+    white-space: nowrap;
+  }
+  
+  .avatar-upload:hover {
+    background-color: rgb(207, 205, 205);
+  }
+
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto; /* 10% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.default-images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Create 4 columns */
+  gap: 10px; /* Add gap between columns and rows */
+}
+
+.default-image {
+  width: 250px; /* Set width to fill the column */
+  height: 250px; /* Automatically adjust height to maintain aspect ratio */
+  object-fit: cover; /* Maintain aspect ratio and cover the entire space */
+}
+
+  .location h3{
+    display: flex;
+    margin-top: 13%;
+    margin-left: 29.5%;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .location input {
+    display: flex;
+    position: absolute;
+    margin-bottom: 1rem;
+    left: 24%;
+    top: 75%;
+    padding-right: 400px;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: solid 1px #c9c7c9;
+    border-top: #0d0a1d;
+    border-left: #0d0a1d;
+    border-right: #0d0a1d;
+  }
+
+  .location input:focus{
+    outline: none;
+    background-color: #eeeeee;
+  }
+
+  .next {
+    display: flex;
+    background-color: #ea4c89;
+    color: #fff;
+    padding: 0.7rem 5rem;
+    border: none;
+    border-radius: 0.5rem;
+    margin-top: 5rem;
+    margin-left: 29%;
+    opacity: 0.5;
+  }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Purpose Selection</title>
+  <link rel="stylesheet" href="purpose.css">
+</head>
+<body>
+  <div class="purpose-selection">
+    <div class="logo"><img src="assets\dribbble white logo.png" id="logo" alt="Illustration"></div>
+    <h3 id="backButton">&lt;</h3>
+    <h1>What brings you to Dribbble?</h1>
+    <p>Select the options that best describe you. Don't worry, you can explore other options later.</p>
+    <form id="purposeForm" action="verification.html">
+      <div class="options">
+        <div class="option" id="radio1">
+          <img src="assets\card 1.png" alt="Option 1">
+          <h4>I'm a designer looking to share my work</h4>
+          <input type="radio" name="options" id="radioOption1">
+        </div>
+        <div class="option" id="radio2">
+          <img src="assets\card 2.png" alt="Option 2">
+          <h4>I'm looking to hire a <br>designer</h4>
+          <input type="radio" name="options" id="radioOption2">
+        </div>
+
+        <div class="option" id="radio3">
+          <img src="assets\card 3.png" alt="Option 3">
+          <h4>I'm looking for design inspiration</h4>
+          <input type="radio" name="options" id="radioOption3">
+        </div>
+      </div>
+      <button class="finish" type="submit">Finish</button>
+    </form>
+  </div>
+
+  <script src="purpose.js" type="module"></script>
+</body>
+</html>

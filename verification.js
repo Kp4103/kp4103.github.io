@@ -29,16 +29,14 @@ function getUrlParameter(name) {
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
 
-// Fetch email and username from URL
-const email = getUrlParameter('email');
+// Fetch username from URL
 const username = getUrlParameter('username');
 
-// Print the email and username to the console
-console.log("Email:", email);
+// Print the username to the console
 console.log("Username:", username);
 
-// Function to fetch avatarURL from Firebase Realtime Database based on username
-function fetchAvatarURL(username) {
+// Function to fetch email from Firebase Realtime Database based on username
+function fetchEmailFromDatabase(username) {
   const db = getDatabase();
   const usersRef = child(databaseRef(db), 'users');
 
@@ -49,8 +47,8 @@ function fetchAvatarURL(username) {
         const userData = snapshot.val();
         // Check if the username exists in the database
         if (userData.hasOwnProperty(username)) {
-          // Username found, return the avatarURL associated with it
-          return userData[username].avatarURL;
+          // Username found, return the email associated with it
+          return userData[username].email;
         } else {
           // Username not found
           return null;
@@ -61,7 +59,7 @@ function fetchAvatarURL(username) {
       }
     })
     .catch((error) => {
-      console.error("Error fetching avatar URL:", error);
+      console.error("Error fetching email:", error);
       return null;
     });
 }
@@ -74,24 +72,18 @@ function updateEmailInHTML(email) {
   }
 }
 
-// Usage: Fetch avatarURL based on username and update the HTML
-fetchAvatarURL(username)
-  .then((avatarURL) => {
-    if (avatarURL) {
-      console.log(`Avatar URL for username '${username}': ${avatarURL}`);
-      // Replace the image in the user-icon with the fetched avatarURL
-      const userIcon = document.querySelector('.user-icon img');
-      if (userIcon) {
-        userIcon.src = avatarURL;
-      }
+// Usage: Fetch email based on username and update the HTML
+fetchEmailFromDatabase(username)
+  .then((email) => {
+    if (email) {
+      console.log(`Email for username '${username}': ${email}`);
+      // Update the email displayed in the HTML
+      updateEmailInHTML(email);
     } else {
-      console.log(`No avatar URL found for username '${username}'`);
+      console.log(`No email found for username '${username}'`);
       // Handle case where username doesn't exist
     }
   })
   .catch((error) => {
-    console.error("Error fetching avatar URL:", error);
+    console.error("Error fetching email:", error);
   });
-
-// Update the email displayed in the HTML
-updateEmailInHTML(email);

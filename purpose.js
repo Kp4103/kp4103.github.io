@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (email) {
           console.log(`Email for username '${username}': ${email}`);
           // Redirect to verification.html with the email as a URL parameter
-          window.location.href = `verification.html?username=${username}&email=${email}`;
+          window.location.href = `verification.html?username=${username}`;
         } else {
           console.log(`No email found for username '${username}'`);
           // Handle case where username doesn't exist
